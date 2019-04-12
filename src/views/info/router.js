@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Index from './Index.vue'
+import Index from './views/Index.vue'
 
 Vue.use(Router)
 
@@ -9,10 +9,34 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/test',
-      name: 'test',
+      path: '/info',
+      name: 'info',
       // component: Index
       component: () => import('./views/Index.vue')
+    },
+    // {
+    //   path: '/',
+    //   beforeEnter () {
+    //     window.location.href = '/index.html'
+    //   }
+    // },
+    {
+      path: '/',
+      name: 'index',
+      // component: Index
+      component: () => import('./views/Index.vue')
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: Index
+      // component: () => import('./Index.vue')
+    },
+    {
+      path: '/test',
+      beforeEnter () {
+        window.location.href = '/test.html'
+      }
     }
     // {
     //   path: '/about',

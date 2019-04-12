@@ -3,7 +3,12 @@ const glob = require('glob')
 
 const titles = {
   index: '首页',
-  test: '测试'
+  course: '课程',
+  video:'视频',
+  info:'资讯',
+  contact:'联系我们',
+  infoDetails:'资讯详情'
+
 }
 const pages = {}
 

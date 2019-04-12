@@ -3,49 +3,39 @@ import Router from 'vue-router'
 import Index from './views/Index.vue'
 
 Vue.use(Router)
-
+console.log(5555)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      redirect:'/index'
+      path: '/infoDetails',
+      name: 'infoDetails',
+      // component: Index
+      component: () => import('./views/Index.vue')
     },
+    // {
+    //   path: '/',
+    //   beforeEnter () {
+    //     window.location.href = '/index.html'
+    //   }
+    // },
     {
-      path: '/index',
+      path: '/',
       name: 'index',
+      // component: Index
       component: () => import('./views/Index.vue')
     },
     {
-      path: '/course',
-      beforeEnter() {
-        window.location.href = '/course.html'
-      }
+      path: '/home',
+      name: 'home',
+      component: Index
+      // component: () => import('./Index.vue')
     },
     {
-      path: '/video',
+      path: '/test',
       beforeEnter () {
-        window.location.href = '/video.html'
-      }
-    },
-    {
-      path: '/info',
-      beforeEnter() {
-        window.location.href = '/info.html'
-      }
-    },
-    {
-      path: '/contact',
-      beforeEnter() {
-        window.location.href = '/contact.html'
-      }
-    },
-    {
-      path:'/infoDetails',
-      beforeEnter() {
-        window.location.href = '/infoDetails.html'
+        window.location.href = '/test.html'
       }
     }
     // {
