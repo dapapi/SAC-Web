@@ -14,6 +14,12 @@ export default new Router({
       // component: Index
       component: () => import('./views/Index.vue')
     },
+    {
+      path: '/course.html',
+      name: 'course',
+      // component: Index
+      component: () => import('./views/Index.vue')
+    },
     
     // {
     //   path: '/',
