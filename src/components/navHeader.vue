@@ -8,6 +8,7 @@
             <div class="tab" v-show="isShow" @click="navShow()">
                 <ul>
                     <li v-for="item in nav" :key="item.id">
+                        <!-- <router-link :class="item.url === path?'active':''" :to="item.url">{{item.name}}</router-link> -->
                         <a :class="item.url === path?'active':''"  :href="item.url">{{item.name}}</a>
                     </li>
                 </ul>
