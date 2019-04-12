@@ -70,8 +70,8 @@ export default {
   methods:{
     goSwiper(){
       this.$router.push({
-                        path:`/swiper`
-                    })
+          path:`/swiper`
+      })
     }
   }
 }

@@ -51,29 +51,29 @@ export default {
               }
             ]
           },
-          {
-            id:2,
-            title:'舞蹈资讯',
-            url:require('../../../assets/info2.jpg'),
-            list:[
-              {
-                id:1,
-                desc:''
-              },
-              {
-                id:2,
-                desc:''
-              },
-              {
-                id:3,
-                desc:''
-              },
-              {
-                id:4,
-                desc:''
-              }
-            ]
-          },
+          // {
+          //   id:2,
+          //   title:'舞蹈资讯',
+          //   url:require('../../../assets/info2.jpg'),
+          //   list:[
+          //     {
+          //       id:1,
+          //       desc:''
+          //     },
+          //     {
+          //       id:2,
+          //       desc:''
+          //     },
+          //     {
+          //       id:3,
+          //       desc:''
+          //     },
+          //     {
+          //       id:4,
+          //       desc:''
+          //     }
+          //   ]
+          // },
           {
             id:3,
             title:'播音资讯',
@@ -97,29 +97,29 @@ export default {
               }
             ]
           },
-          {
-            id:4,
-            title:'服装表演资讯',
-            url:'',
-            list:[
-              {
-                id:1,
-                desc:''
-              },
-              {
-                id:2,
-                desc:''
-              },
-              {
-                id:3,
-                desc:''
-              },
-              {
-                id:4,
-                desc:''
-              }
-            ]
-          }
+          // {
+          //   id:4,
+          //   title:'服装表演资讯',
+          //   url:'',
+          //   list:[
+          //     {
+          //       id:1,
+          //       desc:''
+          //     },
+          //     {
+          //       id:2,
+          //       desc:''
+          //     },
+          //     {
+          //       id:3,
+          //       desc:''
+          //     },
+          //     {
+          //       id:4,
+          //       desc:''
+          //     }
+          //   ]
+          // }
         ]
     }
   },
@@ -128,7 +128,7 @@ export default {
   },
   methods:{
     toDetails(id){
-      window.location.href = `/infoDetails?id=${id}`
+      window.location.href = `/infoDetails.html?id=${id}`
     }
   }
 }
@@ -148,7 +148,7 @@ export default {
       background-size: cover;
     }
     .content{
-      width: 60%;
+      width: 70%;
       margin:0 auto;
       height: 100%;
       background-color:rgba(0,0,0,0.4);

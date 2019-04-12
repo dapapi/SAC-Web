@@ -156,27 +156,27 @@ export default {
                {
                    id:1,
                    name:'首页',
-                   url:'/index'
+                   url:'/index.html'
                },
                {
                    id:2,
                    name:'课程',
-                   url:'/course'
+                   url:'/course.html'
                },
                {
                    id:3,
                    name:'视频',
-                   url:'/video'
+                   url:'/video.html'
                },
                {
                    id:4,
                    name:'资讯',
-                   url:'/info'
+                   url:'/info.html'
                },
                {
                    id:5,
                    name:'联系我们',
-                   url:'/contact'
+                   url:'/contact.html'
                },
 
            ],
@@ -185,8 +185,8 @@ export default {
         }
     },
     created(){
-        if(this.$route.path == '/infoDetails'){
-            this.path = '/info'
+        if(this.$route.path == '/infoDetails.html'){
+            this.path = '/info.html'
         }
     },
     mounted(){

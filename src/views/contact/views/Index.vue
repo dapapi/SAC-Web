@@ -149,6 +149,11 @@ export default {
       height: 100%;
       background-color:rgba(0,0,0,0.4);
     }
+    @media screen and (min-width:769px){
+       .bTitle{
+         padding-top:40px;
+       }
+    }
     @media screen and (max-width:768px){
       .page{
         .content{

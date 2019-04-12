@@ -9,12 +9,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      redirect: '/video'
-    },
-    {
-      path: '/video',
+      path: '/video.html',
       name: 'video',
       // component: Index
       component: () => import('./views/Index.vue')

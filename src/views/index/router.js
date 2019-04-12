@@ -11,39 +11,39 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      redirect:'/index'
+      redirect:'/index.html'
     },
     {
-      path: '/index',
+      path: '/index.html',
       name: 'index',
       component: () => import('./views/Index.vue')
     },
     {
-      path: '/course',
+      path: '/course.html',
       beforeEnter() {
         window.location.href = '/course.html'
       }
     },
     {
-      path: '/video',
+      path: '/video.html',
       beforeEnter () {
         window.location.href = '/video.html'
       }
     },
     {
-      path: '/info',
+      path: '/info.html',
       beforeEnter() {
         window.location.href = '/info.html'
       }
     },
     {
-      path: '/contact',
+      path: '/contact.html',
       beforeEnter() {
         window.location.href = '/contact.html'
       }
     },
     {
-      path:'/infoDetails',
+      path:'/infoDetails.html',
       beforeEnter() {
         window.location.href = '/infoDetails.html'
       }

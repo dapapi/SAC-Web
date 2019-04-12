@@ -9,12 +9,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      redirect: '/contact'
-    },
-    {
-      path: '/contact',
+      path: '/contact.html',
       name: 'contact',
       // component: Index
       component: () => import('./views/Index.vue')
@@ -25,24 +20,24 @@ export default new Router({
     //     window.location.href = '/index.html'
     //   }
     // },
-    {
-      path: '/',
-      name: 'index',
-      // component: Index
-      component: () => import('./views/Index.vue')
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Index
-      // component: () => import('./Index.vue')
-    },
-    {
-      path: '/test',
-      beforeEnter () {
-        window.location.href = '/test.html'
-      }
-    }
+    // {
+    //   path: '/',
+    //   name: 'index',
+    //   // component: Index
+    //   component: () => import('./views/Index.vue')
+    // },
+    // {
+    //   path: '/home',
+    //   name: 'home',
+    //   component: Index
+    //   // component: () => import('./Index.vue')
+    // },
+    // {
+    //   path: '/test',
+    //   beforeEnter () {
+    //     window.location.href = '/test.html'
+    //   }
+    // }
     // {
     //   path: '/about',
     //   name: 'about',
