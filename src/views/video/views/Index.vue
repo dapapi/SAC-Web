@@ -8,7 +8,7 @@
           <ul class="videolist clearfix">
             <li v-for="item in videoList" :key="item.id" @click="goSwiper()">
               <div class="pic">
-                <img :src="item.url" alt="">
+                <!-- <img :src="item.url" alt=""> -->
                 <div class="play"></div>
               </div>
               <p class="important"><span class="name">{{item.name}}</span>|<span class="time">{{item.time}}</span></p>
@@ -28,35 +28,35 @@ export default {
        videoList:[
          {
            id:1,
-           url:require('../../../assets/performance2.jpg'),
+          //  url:require('../../../assets/images/performance2.jpg'),
            name:'Video Title',
            time:'00:32',
            desc:'This is a great space to update your audience with a description of your video. Include informati'
          },
          {
            id:2,
-           url:require('../../../assets/performance2.jpg'),
+          //  url:require('../../../assets/images/performance2.jpg'),
            name:'Video Title',
            time:'00:32',
            desc:'This is a great space to update your audience with a description of your video. Include informati'
          },
          {
            id:3,
-           url:require('../../../assets/performance2.jpg'),
+          //  url:require('../../../assets/images/performance2.jpg'),
            name:'Video Title',
            time:'00:32',
            desc:'This is a great space to update your audience with a description of your video. Include informati'
          },
          {
            id:4,
-           url:require('../../../assets/performance2.jpg'),
+          //  url:require('../../../assets/images/performance2.jpg'),
            name:'Video Title',
            time:'00:32',
            desc:'This is a great space to update your audience with a description of your video. Include informati'
          },
          {
            id:5,
-           url:require('../../../assets/performance2.jpg'),
+          //  url:require('../../../assets/images/performance2.jpg'),
            name:'Video Title',
            time:'00:32',
            desc:'This is a great space to update your audience with a description of your video. Include informati'
@@ -81,15 +81,6 @@ export default {
     .page{
         padding-top:80px;
         min-height:calc(100vh - 80px);
-        .bg{
-          height: 100vh;
-          width:100%;
-          position: fixed;
-          z-index:-100;
-          background-image:url('../../../assets/bgCourse.jpg');
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
         .content{
           width:80%;
           margin:0 auto;
@@ -132,7 +123,7 @@ export default {
                   width: 100%;
                   height: 100%;
                   background-color:rgba(0,0,0,0.3);
-                  background-image: url('../../../assets/headerTitle.jpg');
+                  background-image: url('../../../assets/images/headerTitle.jpg');
                   background-repeat: no-repeat;
                   background-position: center center;
                 }

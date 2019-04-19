@@ -60,21 +60,21 @@ import 'swiper/dist/css/swiper.css'
   .swiper-slide {
     background-size: cover;
     background-position: center;
-    &.slide-1 {
-      background-image:url('../../../assets/bgCourse.jpg');
-    }
-    &.slide-2 {
-      background-image:url('../../../assets/bgCourse.jpg');
-    }
-    &.slide-3 {
-      background-image:url('../../../assets/bgCourse.jpg');
-    }
-    &.slide-4 {
-      background-image:url('../../../assets/bgCourse.jpg');
-    }
-    &.slide-5 {
-      background-image:url('../../../assets/bgCourse.jpg');
-    }
+    // &.slide-1 {
+    //   background-image:url('../../../assets/images/bgCourse.jpg');
+    // }
+    // &.slide-2 {
+    //   background-image:url('../../../assets/images/bgCourse.jpg');
+    // }
+    // &.slide-3 {
+    //   background-image:url('../../../assets/images/bgCourse.jpg');
+    // }
+    // &.slide-4 {
+    //   background-image:url('../../../assets/images/bgCourse.jpg');
+    // }
+    // &.slide-5 {
+    //   background-image:url('../../../assets/images/bgCourse.jpg');
+    // }
   }
   .gallery-top {
     height: 80%!important;

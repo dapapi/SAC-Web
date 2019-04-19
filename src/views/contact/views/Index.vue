@@ -2,39 +2,24 @@
   
   <div>
     <navHeader></navHeader>
-    <div class="page">
-      <div class="bg"></div>
+    <div class="page-contact">
+      
       <div class="content">
-        <h4 class="bTitle">联系我们</h4>
-        <div class="underline">
-          <h5>联系电话</h5>
-          <p>电话：010-XXXXXXXX</p>
-          <h5>邮箱地址</h5>
-          <p>邮箱：010-XXXXXXXX</p>
-          <h5>公司地址</h5>
-          <p>公司：XX市XX区XXX街道XX号</p>
+        <h3>CONTACT US</h3>
+        <div class="contact-desc">
+           <p>更多信息、预约试听，欢迎与我们专业的课程顾问沟通。 </p>
+           <p> 相信我们，为每一个热爱艺术的孩子。</p>
         </div>
-        <h4 class="bTitle" style="padding-top:20px;">留言联系</h4>
-        <div class="say">
-          <div class="msg clearfix">
-            <div class="item">
-              <input type="text" v-model="name" placeholder="姓名">
-            </div>
-            <div class="item">
-              <input type="text" v-model="pro" placeholder="专业">
-            </div>
-            <div class="item">
-              <input type="text" v-model="email" placeholder="邮箱">
-            </div>
-            <div class="item">
-              <input type="text" v-model="phone" placeholder="联系电话">
-            </div>
-          </div>
-          <div class="know">
-            <textarea name="" id="" v-model="desc" placeholder="有什么想了解的"></textarea>
-          </div>
-          <button class="submit" @click="submitMsg()">提交</button>
-        </div>
+        <ul class="link">
+          <li v-for="item in desc" :key="item.id">
+            <p>{{item.name}}</p>
+            <p>{{item.phone}}</p>
+            <img :src="item.img" alt="">
+            <p class="text-right">扫一扫微信咨询</p>
+          </li>
+        </ul>
+        <p class="mb-10">北京市朝阳区IT0WN合悦</p>
+        <p>Copyright 2010-2020. All right reserved. 2010-2020	星寬艺术中心 S Art Centre.</p>
       </div>
     </div>
   </div>
@@ -47,11 +32,20 @@ export default {
   name: 'contact',
   data(){
     return{
-       name:'',
-       email:'',
-       pro:'',
-       phone:'',
-       desc:''
+       desc:[
+         {
+           id:1,
+           phone:'188 1036 0206',
+           name:'雪昱老师',
+           img:require('../../../assets/images/wechat2.png'),
+         },
+         {
+           id:2,
+           phone:'139 2846 0192',
+           name:'乐褀老师',
+           img:require('../../../assets/images/wechat1.png'),
+         }
+       ]
     }
   },
   components:{
@@ -66,96 +60,67 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   .page{
+   .page-contact{
       padding-top:80px;
       min-height:calc(100vh - 80px);
+      text-align: left;
       .content{
-        .bTitle{
-          font-size: 40px;
-          font-weight: bold;
+        width: 80%;
+        margin:0 auto;
+        height: 100%;
+        background-color:rgba(0,0,0,0.4);
+        .link{
+          display: flex;
+          width: 80%;
+          li{
+            flex: 1;
+            &:first-child{
+              margin-right: 10px;
+            }
+            img{
+              width:150px;
+              height: 150px;
+            }
+          }
+        }
+        h3{
+          padding-top:50px;
           text-align: left;
-          color:#fff;
-          padding-bottom:20px;
-          border-bottom:1px dashed #808080;
+          font-size: 30px;
+          letter-spacing: 3px;
+          
         }
-        .underline{
-          h5{
-            font-size: 30px;
-            font-weight: bold;
-            color:#fff;
-            text-align: left;
-            padding-left:40px;
-            margin:20px 0;
-          }
+        .contact-desc{
+          margin-top:40px;
           p{
-            color:#808080;
-            font-size: 20px;
-            padding:10px 40px;
-            background-color:rgba(255,255,255,.1);
             text-align: left;
+            letter-spacing: 1px;
+            line-height: 30px;
           }
         }
-        .say{
-          width: 70%;
-          padding:3%;
-          margin:20px auto;
-          background-color:rgba(255,255,255,.2);
-          .msg{
-            .item{
-              float: left;
-              width: 50%;
-              input{
-                width:calc(100% - 12px);
-                height: 40px;
-                padding-left:10px;
-                border:2px solid #808080;
-                font-size: 16px;
-              }
-            }
+        .link{
+          margin-bottom:40px;
+          margin-top:50px;
+          p{
+            margin:5px 0;
           }
-          .know{
-            textarea{
-              width:calc(100% - 12px);
-              height: 100px;
-              padding-left:10px;
-              font-size: 16px;
-            }
+          .text-right{
+            // text-align: right;
+            width: 80%;
           }
-          .submit{
-            width:120px;
-            height: 48px;
-            font-size: 20px;
-            border:0px;
-            background-color:#edb307;
-            color:#fff;
-            margin:10px 0;
-            border-radius: 6px;
-          }
+        }
+        .mb-10{
+          margin-bottom: 10px;
         }
       }
-    }
-    .bg{
-      height: 100vh;
-      width:100%;
-      position: fixed;
-      z-index:-100;
-      background-image:url('../../../assets/bgCourse.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .content{
-      width: 80%;
-      margin:0 auto;
-      height: 100%;
-      background-color:rgba(0,0,0,0.4);
-    }
+   }
     @media screen and (min-width:769px){
        .bTitle{
          padding-top:40px;
        }
     }
     @media screen and (max-width:768px){
-      .page{
+      .page-contact{
         .content{
           width: 96%;
           .bTitle{

@@ -3,30 +3,56 @@
     <navHeader></navHeader>
     <div class="page">
         <div class="content">
-          <div class="pic"></div>
-          <img src="../../../assets/phoneHomeBanner.jpg" alt="">
-          <div class="desc">
-              <p v-for="(item,index) in desc" :key="index">{{item}}</p>
-          </div>
+          <swiper :options="swiperOption">
+            <swiper-slide v-for="item in swiperData" :key="item.id">
+              
+              <div class="swiperList" :class="`swiper-list${item.id}`">
+                  <img :src="item.url" alt="">
+                  <p>{{item.title}}</p>
+              </div>
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+          </swiper>
         </div>
     </div>
   </div>
 </template>
 <script>
+import 'swiper/dist/css/swiper.css'
 import navHeader from '../../../components/navHeader'
 export default {
   name: 'home',
   data(){
     return{
-       desc:[
-         '将生命委以艺术',
-         '以技艺之初探体验其芳华',
-         '愿S艺考成为一颗星辰',
-         '闪在晨曦 闪在黄昏',
-         '在尘世的喧嚣里 摇曳着芬芳',
-         '存于浓情  淡韵',
-         '最终凝成时光的芳醇'
-       ]
+       swiperData:[
+         {
+           id:1,
+           title:'致敬献给舞台的青春',
+           url:require('../../../assets/images/home1.jpg')
+         },
+         {
+           id:2,
+           title:'为每一个至臻闪耀的时刻',
+           url:require('../../../assets/images/home2.jpg')
+         },
+         {
+           id:3,
+           title:'激发闪耀人生',
+           url:require('../../../assets/images/home3.jpg')
+         }
+       ],
+       swiperOption: {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      }
     }
   },
   components:{
@@ -40,70 +66,78 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
+<style lang="scss">
   .page{
-    width:80%;
-    margin-left:10%;
-    .pic{
-      width: 100%;
-      height: 100%;
-      background-image:url("../../../assets/home.jpg");
-      background-repeat: no-repeat;
-      background-size:100% 100%;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    // .pic{
+    //   width: 100%;
+    //   height: 100%;
+    //   background-image:url("../../../assets/images/home.jpg");
+    //   background-repeat: no-repeat;
+    //   background-size:100% 100%;
 
-    }
-    .desc{
-      position: absolute;
-      background-color:rgba(255,255,255,0.18);
+    // }
+  }
+  .swiper-container{
+     height: 100%;
+  }
+  .swiperList{
+      position: relative;
+      height:100%;
+      display: flex;
+      img{
+        justify-content: center;
+        align-items: center; 
+      }
       p{
-        font-size: 20px;
-        font-family:'微软雅黑';
-        font-weight: bold;
-        margin-bottom:20px;
-        padding-left:8%;
-        text-align:left;
-        color:#fff
+        position: absolute;
+        font-size: 24px;
+        font-weight: 100;
+        letter-spacing:6px;
+        
       }
 
+  }
+  .swiper-list1{
+    p{
+        right:20%;
+        top:55%;
+    }
+  }
+  .swiper-list2{
+    p{
+        left:36%;
+        top:64%;
+    }
+  }
+  .swiper-list3{
+    p{
+        right:20%;
+        top:27%;
     }
   }
   
+  .page .content .swiper-pagination-bullet{
+    background-color:rgba(0,0,0,0);
+    border:1px solid #dcdddd;
+    opacity:1;
+  }
+  .page .content .swiper-pagination-bullet-active{
+    background:#dcdddd;
+  }
   @media screen  and(min-width:769px){
     .page{
-       height: calc(100vh - 140px);
-       margin-top:110px;
-       margin-bottom:30px;
-       
        .content{
           width: 100%;
           height: 100%;
           position: relative;
-          &:hover{
-            .desc{
-              display: block;
-            }
-          }
-          img{
-            display: none;
-          }
-      }
-      .desc{
-        display: none;
-        width: 100%;
-        height:100%;
-        top:0px;
-        p{
-          &:first-child{
-             margin-top:4%;
-          }
-        }
       }
      }
   }
   @media screen and(max-width:768px){
      .page{
-       height:calc(100vh - 70px);
        margin:0px;
        width: 100%;
        overflow:hidden;
@@ -112,21 +146,15 @@ export default {
          height: 100%;
          position: relative;
        }
-       .desc{
-         display: block;
-         background-color:rgba(0,0,0,0.4);
-         bottom:0px;
-         left:0px;
-         padding:4% 0;
-         width:100%;
-        //  height: 100%;
-       }
        img{
          height: 100%;
        }
-       .pic{
-          display: none;
-       }
+       .swiper-list2{
+          p{
+              left:16%;
+              top:64%;
+          }
+        }
      }
   }
 </style>

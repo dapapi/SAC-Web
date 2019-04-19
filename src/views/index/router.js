@@ -24,6 +24,12 @@ export default new Router({
         window.location.href = '/course.html'
       }
     },
+     {
+       path: '/about.html',
+       beforeEnter() {
+         window.location.href = '/about.html'
+       }
+     },
     {
       path: '/video.html',
       beforeEnter () {

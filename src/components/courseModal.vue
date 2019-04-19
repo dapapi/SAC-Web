@@ -68,7 +68,7 @@
                     <ul>
                         <li>
                             <span class="type">服装</span>
-                            <img src="../assets/model1.jpg" alt="">
+                            <!-- <img src="../assets/images/model1.jpg" alt=""> -->
                             <h3>全程班课程</h3>
                         </li>
                     </ul>
@@ -111,7 +111,7 @@ export default {
                    id:1,
                    name:'表演',
                    title:'暑期课程',
-                   img:require('../assets/performance1.jpg'),
+                //    img:require('../assets/images/performance1.jpg'),
                    data:[
                        '6周课程培训',
                        '行业顶级教师指导，名师授课',
@@ -123,7 +123,7 @@ export default {
                    id:2,
                    name:'表演',
                    title:'全程班课程',
-                   img:require('../assets/performance2.jpg'),
+                //    img:require('../assets/images/performance2.jpg'),
                    data:[
                        '6个月全方位辅导',
                        '冲击一本院校',
@@ -136,7 +136,7 @@ export default {
                    id:3,
                    name:'表演',
                    title:'S计划',
-                   img:require('../assets/performance3.jpg'),
+                //    img:require('../assets/images/performance3.jpg'),
                    data:[
                        '6个月高端课程',
                        '冲刺专业最顶尖院校',
@@ -151,7 +151,7 @@ export default {
                     id:1,
                     name:'舞蹈',
                     title:'暑期课程',
-                    img:require('../assets/dance1.jpg'),
+                    // img:require('../assets/images/dance1.jpg'),
                     data:[
                         '小班容授课，关注度高',
                         '行业名师辅导，高效提升',
@@ -163,7 +163,7 @@ export default {
                     id:2,
                     name:'舞蹈',
                     title:'全程班课程',
-                    img:require('../assets/dance2.jpg'),
+                    // img:require('../assets/images/dance2.jpg'),
                     data:[
                         '集中授课，分层教学',
                         '基训、技巧、剧目、编舞全面授课',
@@ -177,7 +177,7 @@ export default {
                     id:3,
                     name:'舞蹈',
                     title:'S计划',
-                    img:require('../assets/dance3.jpg'),
+                    // img:require('../assets/images/dance3.jpg'),
                     data:[
                         '3个月高端课程',
                         '全方位培训，冲刺专业最顶尖院校',
@@ -193,7 +193,7 @@ export default {
                     id:1,
                     name:'播/导',
                     title:'提高课程',
-                    img:require('../assets/scenarist1.jpg'),
+                    // img:require('../assets/images/'),
                     data:[
                         {
                             title:'课程简介:',
@@ -217,7 +217,7 @@ export default {
                     id:2,
                     name:'播/导',
                     title:'全程班课程',
-                    img:require('../assets/scenarist2.jpg'),
+                    // img:require('../assets/images/scenarist2.jpg'),
                     data:[
                         {
                             title:'课程简介:',

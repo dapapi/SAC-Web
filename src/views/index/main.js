@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 // import store from './store'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper, /* { default global options } */ )
 Vue.config.productionTip = false
 console.log(router)
 

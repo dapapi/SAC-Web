@@ -3,11 +3,15 @@ const glob = require('glob')
 
 const titles = {
   index: '首页',
+  team:'师资团队',
+  teach:'教学团队',
   course: '课程',
   video:'视频',
   info:'资讯',
   contact:'联系我们',
-  infoDetails:'资讯详情'
+  infoDetails:'资讯详情',
+  starplan:'星跃计划',
+  about:'关于我们'
 
 }
 const pages = {}

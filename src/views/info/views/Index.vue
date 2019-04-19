@@ -1,21 +1,20 @@
 <template>
   <div>
     <navHeader></navHeader>
-    <div class="page">
-        <div class="bg"></div>
+    <div class="page-info">
         <div class="content">
-          <ul>
-            <li class="clearfix infolist" v-for="item in infoList" :key="item.id">
-                <div>
-                 <h2>{{item.title}}</h2>
-                  <span class="more" @click="toDetails(item.id)">More</span>
-                  <p v-for="item2 in item.list" :key="item2.id"><span class="big">{{item2.id}}</span>{{item2.desc}}</p>
+          <h3>GUIDING INFORMATION</h3>
+          <ul class="infolist">
+            <li v-for="item in info" :key="item.id">
+                <h4>{{item.title}}</h4>
+                <div v-for="item2 in item.desc" :key="item2.id">
+                    <p>{{item2.zh}}</p>
+                    <p>{{item2.en}}</p>
                 </div>
-                <div>
-                  <img v-if="item.url" :src="item.url" alt="">
-                </div>
+                <p class="more" @click="toDetails(item.id)">查看更多院校</p>
             </li>
           </ul>
+          <p class="linkus">了解更多信息，或预约试听</p>
         </div>
     </div>
   </div>
@@ -27,99 +26,128 @@ export default {
   name: 'info',
   data(){
     return{
-        infoList:[
+        info:[
           {
             id:1,
-            title:'表演资讯',
-            url:require('../../../assets/info1.jpg'),
-            list:[
-              {
-                id:1,
-                desc:'中央戏剧学院招生简章'
-              },
-              {
-                id:2,
-                desc:'北京电影学院招生简章'
-              },
-              {
-                id:3,
-                desc:'上海戏剧学院招生简章'
-              },
-              {
-                id:4,
-                desc:'中国传媒大学招生简章'
-              }
+            title:'表演',
+            desc:[
+               {
+                 id:1,
+                 en:'The Central Academy of Drama',
+                 zh:'中央戏剧学院'
+               },
+               {
+                 id:2,
+                 en:'Beijing Film Academy',
+                 zh:'北京电影学院'
+               },
+               {
+                 id:3,
+                 en:'Shanghai Theatre Academy',
+                 zh:'上海戏剧学院'
+               },
+               {
+                 id:4,
+                 en:'The Central Academy Of Drama',
+                 zh:'中央戏剧学院'
+                },
+                {
+                 id:5,
+                 en:'Communication University of China',
+                 zh:'中国传媒大学	浙江传媒学院	南京艺术学院'
+               }
             ]
           },
-          // {
-          //   id:2,
-          //   title:'舞蹈资讯',
-          //   url:require('../../../assets/info2.jpg'),
-          //   list:[
-          //     {
-          //       id:1,
-          //       desc:''
-          //     },
-          //     {
-          //       id:2,
-          //       desc:''
-          //     },
-          //     {
-          //       id:3,
-          //       desc:''
-          //     },
-          //     {
-          //       id:4,
-          //       desc:''
-          //     }
-          //   ]
-          // },
+          {
+            id:2,
+            title:'舞蹈',
+            desc:[
+               {
+                 id:1,
+                 en:'Capital University of Physical Education and Sports',
+                 zh:'首都体育大学'
+               },
+               {
+                 id:2,
+                 en:'Wuhan Conservatory Of Music',
+                 zh:'武汉音乐学院'
+               },
+               {
+                 id:3,
+                 en:'Xinghai Conservatory of Music',
+                 zh:'星海音乐学院'
+               },
+               {
+                 id:4,
+                 en:'Xi’an Conservatory of Music',
+                 zh:'西安音乐学院'
+               },{
+                 id:5,
+                 en:'Communication University of Zhejiang',
+                 zh:'浙江传媒学院'
+               }
+            ]
+          },
           {
             id:3,
-            title:'播音资讯',
-            url:require('../../../assets/info3.jpg'),
-            list:[
-              {
-                id:1,
-                desc:'中国传媒大学招生简章'
-              },
-              {
-                id:2,
-                desc:'浙江传媒学院招生简章'
-              },
-              {
-                id:3,
-                desc:'中央戏剧学院招生简章'
-              },
-              {
-                id:4,
-                desc:'上海戏剧学院招生简章'
-              }
+            title:'播音主持',
+            desc:[
+               {
+                 id:1,
+                 en:'Communication University of China',
+                 zh:'中国传媒大学'
+               },
+               {
+                 id:2,
+                 en:'Communication University of Zhejiang',
+                 zh:'浙江传媒学院'
+               },
+               {
+                 id:3,
+                 en:'The Central Academy of Drama',
+                 zh:'中央戏剧学院'
+               },
+               {
+                 id:4,
+                 en:'Shanghai Theatre Academy',
+                 zh:'上海戏剧学院'
+               },{
+                 id:5,
+                 en:'anjing University of the Arts',
+                 zh:'南京艺术学院'
+               }
             ]
           },
-          // {
-          //   id:4,
-          //   title:'服装表演资讯',
-          //   url:'',
-          //   list:[
-          //     {
-          //       id:1,
-          //       desc:''
-          //     },
-          //     {
-          //       id:2,
-          //       desc:''
-          //     },
-          //     {
-          //       id:3,
-          //       desc:''
-          //     },
-          //     {
-          //       id:4,
-          //       desc:''
-          //     }
-          //   ]
-          // }
+          {
+            id:4,
+            title:'影视编导',
+            desc:[
+               {
+                 id:1,
+                 en:'The Central Academy of Drama',
+                 zh:'中央戏剧学院'
+               },
+               {
+                 id:2,
+                 en:'Beijing Film Academy',
+                 zh:'北京电影学院'
+               },
+               {
+                 id:3,
+                 en:'Shanghai Theatre Academy',
+                 zh:'上海戏剧学院'
+               },
+               {
+                 id:4,
+                 en:'Communication University of China',
+                 zh:'中国传媒大学'
+               },{
+                 id:5,
+                 en:'Meishi Film Academy of ChongQing University',
+                 zh:'重庆大学美视电影学院'
+               }
+            ]
+          }
         ]
     }
   },
@@ -134,109 +162,118 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .page{
+    .page-info{
       padding-top:80px;
       min-height:calc(100vh - 80px);
     }
-    .bg{
-      height: 100vh;
-      width:100%;
-      position: fixed;
-      z-index:-100;
-      background-image:url('../../../assets/bgCourse.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
     .content{
-      width: 70%;
+      width: 90%;
       margin:0 auto;
       height: 100%;
-      background-color:rgba(0,0,0,0.4);
       padding-top:50px;
+      .linkus{
+        border:1px solid #dcdddd;
+        width: 100%;
+        padding:5px 0;
+        color:#dcdddd;
+        font-size: 14px;
+        text-align:center;
+        margin-top:30px;
+        letter-spacing: 2px;
+        margin-bottom:20px;
+      }
+      h3{
+          padding-top:50px;
+          text-align: left;
+          font-size: 30px;
+          letter-spacing: 3px;
+          
+        }
       .infolist{
-        margin-bottom:30px;
-        
-        >div{
-          width: 50%;
-          &:first-child{
-            position: relative;
-            float:left;
-          }
-          &:last-child{
-            padding-left:20px;
-            width:calc(50% - 20px);
-            float:right;
-            img{
-              border-left: 6px solid #edb307;
-              border-bottom:6px solid #edb307
-            }
-          }
-        }
-        &:nth-of-type(2){
+        margin-top:40px;
+        li{
+          
+          padding:20px;
+          background-color:rgba(100, 148, 173, .15);
+          color:#6494ad;
+          font-size: 14px;
+          position: relative;
+          padding-bottom:60px;
           >div{
-            &:first-child{
-              float:right;
-              padding-left:20px;
-              width:calc(50% - 20px);
-            }
-            &:last-child{
-              float:left;
-              img{
-                border-right: 6px solid #edb307;
-                border-bottom:6px solid #edb307;
-                border-left: none;
-              }
-            }
+            margin-bottom:10px;
           }
-        }
-        &:nth-of-type(3){
-          >div{
-            &:last-child{
-              height: 200%;
-              img{
-                height: 100%;
-              }
-            }
+          p{
+            line-height: 22px;
+            color:#6494ad;
+
           }
-        }
-        img{
-          width: 100%;
-        }
-        h2{
-          font-size: 26px;
-          color:#fff;
-          text-align: left;
-          margin-bottom:20px;
-        }
-        p{
-          text-align: left;
-          color:#fff;
-          font-size: 16px;
-          padding-left:10px;
-          line-height: 40px;
-        }
-        .big{
-          font-size: 24px;
-          font-weight: bold;
-          margin-right: 4px;
+          h4{
+            margin-bottom:20px;
+            font-size: 16px;
+            color:#6494ad;
+          }
         }
         .more{
+          font-size: 16px;
+          background: rgba(18, 125, 243, 0.25);
+          color:rgba(135,167,163,1);
+          margin-top:10px;
           position: absolute;
-          top:0px;
-          right:0px;
-          color:#fff;
-          font-size: 18px;
-          font-weight: bold;
-          cursor: pointer;
+          bottom:20px;
+          padding:10px 0;
+          width:calc(100% - 40px);
+         
         }
       }
     }
     @media screen and (min-width:769px){
-
+        .page-info{
+          
+          .infolist{
+            display: flex;
+            
+            li{
+              flex:1;
+             
+              margin-right: 20px;
+             
+              &:last-child{
+                margin-right: 0px;
+              }
+            }
+            .more{
+              font-size: 16px;
+              background: rgba(18, 125, 243, 0.25);
+              color:rgba(135,167,163,1);
+              margin-top:10px;
+              position: absolute;
+              bottom:20px;
+              padding:10px 0;
+              width:calc(100% - 40px);
+            
+            }
+          }
+        }
     }
     @media screen and (max-width:768px){
+      .page-info{
+        h3{
+            padding-top:0px;
+            text-align: left;
+            font-size: 30px;
+            letter-spacing: 3px;
+            
+          }
+        .infolist{
+          li{
+            margin-bottom:30px;
+            
+          }
+        }
+      }
       .content{
         width:96%;
+        margin:0 auto;
         padding-top:20px;
         .infolist{
           p{

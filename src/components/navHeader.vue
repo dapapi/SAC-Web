@@ -1,9 +1,11 @@
 <template>
     <header>
         <div class="content">
-            <h1>SAC</h1>
+            <h1>
+                <img src="../assets/images/logo.png" alt="">
+            </h1>
             <div class="pHeader" @click="navShow()">
-                <img src="../assets/headerTitle.jpg" alt="">
+                <img src="../assets/images/headerTitle.jpg" alt="">
             </div>
             <div class="tab" v-show="isShow" @click="navShow()">
                 <ul>
@@ -17,9 +19,15 @@
     </header>
 </template>
 <style lang="scss">
+      @font-face {
+          font-family: 'pingfang';
+          src: url('../assets/font/苹方黑体-准-简.ttf');
+      }
       body,html,ul,li,p,h1,h2,h3,h4,h5,h6{
           padding:0px;
           margin:0px;
+          font-family: 'pingfang';
+          color:#dcdddd;
       }
       li{
           list-style:none;
@@ -30,7 +38,7 @@
       a{
         text-decoration: none;
         color:#ccc;
-        font:normal normal 700 19px/1.4em poppins-semibold,poppins,sans-serif;
+        font-size: 16px;
       }
       body{
         background-color:#000;
@@ -52,45 +60,53 @@
           width: 100%;
           top:0px;
           z-index: 20000;
-          box-shadow: 0px 2px 6px #313030;
           background-color:#000;
           .content{
-            display: flex;
-            width:80%;
+            width:90%;
             margin:0 auto;
           }
+          
       }
-      h1{
-          margin:0px;
-          padding:8px;
-          flex:2;
-          color:#fff;
-          font-size: 40px;
-          text-align: left;
-      }
+      
       
       @media screen and (min-width:769px){
             .pHeader{
               display: none
             }
+            header{
+                h1{   
+                    position: absolute;
+                    right: 76%;
+                    top:38%;
+                    img{
+                        max-width: 90%;
+                    
+                    }
+                }
+            }
             .tab{
                 display:block !important;
-                flex:10;
                 ul{
                     display: flex;
                     height: 100%;
+                    margin-top:4%;
+                    margin-left:30%;
                     li{
-                        
                         flex: 1;
                         text-align: right;
                         a{      
                             display: inline-block;
                             margin-top:16px;
-                            padding:8px 10px; 
+                            padding:8px 14px; 
+                            font-size: 15px;
+                            color:#dcdddd;
+                            letter-spacing: 2px;
+                            opacity: .7;
+                            
                         }
                         .active{
-                            border-top:4px solid rgba(237,179,7,1);
-                            color:rgba(237,179,7,1)
+                            border-bottom:2px solid #dcdddd;
+                            color:#dcdddd
                         }
                     
                     }
@@ -124,27 +140,32 @@
                     font-size: 30px;
                     position: absolute;
                     left:0px;
-                    top:-2px;
+                    top:0px;
+                    height: 50px;
+                    img{
+                       height:50px;
+                    }
 
                 }
                 .content{
                     width:98%;
                     margin:0 auto;
                     position: relative;
-                    
                 }
                 img{
 
                     margin-top:8px;
-                    width:30px;
-                    height: 20px;
                 }
             }
             .pHeader{
               padding:6px 0;
               width: 100%;
               text-align: center;
-              
+              img{
+                  width: 30px;
+                  height: 20px;
+                  margin-top:10px;
+              }
             }
       }
 </style>
@@ -155,26 +176,41 @@ export default {
            nav:[
                {
                    id:1,
-                   name:'首页',
+                   name:'欢迎首页',
                    url:'/index.html'
                },
                {
                    id:2,
-                   name:'课程',
-                   url:'/course.html'
+                   name:'关于我们',
+                   url:'/about.html'
                },
                {
                    id:3,
-                   name:'视频',
-                   url:'/video.html'
+                   name:'师资团队',
+                   url:'/team.html'
                },
                {
                    id:4,
-                   name:'资讯',
-                   url:'/info.html'
+                   name:'教学模式',
+                   url:'/teach.html'
                },
                {
                    id:5,
+                   name:'课程介绍',
+                   url:'/course.html'
+               },
+               {
+                   id:6,
+                   name:'资讯指南',
+                   url:'/info.html'
+               },
+               {
+                   id:7,
+                   name:'星跃计划',
+                   url:'/starplan.html'
+               },
+               {
+                   id:8,
                    name:'联系我们',
                    url:'/contact.html'
                },
