@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all-page">
     <navHeader></navHeader>
     <div class="page-plan">
         <div class="content">
@@ -10,7 +10,7 @@
           <div class="plan-desc">
              <p v-for="(item,index) in desc2" :key="index">{{item}}</p>
           </div>
-          <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p>
+          <!-- <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p> -->
         </div>
     </div>
   </div>
@@ -30,7 +30,7 @@ export default {
          
        ],
        desc2:[
-         '星跃计划为课程中表现优秀的学员提供学费减免等激励措施，',
+         '你可以成为优秀学员代表，加入星跃计划，为课程减免学费。',
          '最高减免比例达到学费的30%。',
          
        ]
@@ -51,9 +51,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .all-page{
+    background-image:url("../../../assets/images/starplan.png");
+    background-repeat:no-repeat;
+    background-position:0 0;
+    background-size:100% 100%;
+    width:100%;
+  }
   .page-plan{
     width:80%;
     margin-left:10%;
+    
+    
     .linkus{
       border:1px solid #dcdddd;
       width: 100%;

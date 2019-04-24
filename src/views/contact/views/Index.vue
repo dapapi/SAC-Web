@@ -18,8 +18,8 @@
             <p class="text-right">扫一扫微信咨询</p>
           </li>
         </ul>
-        <p class="mb-10">北京市朝阳区IT0WN合悦</p>
-        <p>Copyright 2010-2020. All right reserved. 2010-2020	星寬艺术中心 S Art Centre.</p>
+        <p class="mb-10 small">冬枫德必WE人工智能创新基地</p>
+        <p class="small">Copyright 2010-2020. All right reserved. 2010-2020	星冕艺术中心 S Art Centre.</p>
       </div>
     </div>
   </div>
@@ -112,6 +112,9 @@ export default {
         .mb-10{
           margin-bottom: 10px;
         }
+      }
+      .small{
+        font-size:12px;
       }
    }
     @media screen and (min-width:769px){

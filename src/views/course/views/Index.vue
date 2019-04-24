@@ -1,75 +1,76 @@
 <template>
   <div>
-    <navHeader></navHeader>
+    <navHeader @change="switchSlide"></navHeader>
     <div class="page-course">
       <div class="light"><img src="../../../assets/images/light.jpg" alt=""></div>
-        <div class="content">
-          <h3>SUBJECTS&PROGRAMME</h3>
-          <swiper :options="swiperOption">
-            <swiper-slide v-for="item in data" :key="item.id">
-              <div class="swiperList" :class="`swiper-list${item.id}`">
-                  <div class="top">
-                    <h4 class="title">
-                      <span class="zh">{{item.zhTitle}}</span>
-                      <span class="en">{{item.title}}</span>
-                    </h4>
-                    <p>{{item.desc}}</p>
-                  </div>
-                  <div class="center">
-                    <h4>考试内容</h4>
-                    <p v-for="(item2,index) in item.content" :key="index">{{item2}}</p>
-                  </div>
-                  <ul class="bottom">
-                    <li v-for="item3 in item.class" :key="item3.id">
-                      <h4>{{item3.title}}</h4>
-                      <p v-for="item4 in item3.desc" :key="item4.id">
-                        <span v-if="item4.title">{{item4.title}}:</span>
-                        <span>{{item4.desc}}</span>
-                      </p>
-                    </li>
-                  </ul>
-                  <div class="vip" v-if="item.vip">
-                      <h4>{{item.vip.title}}</h4>
-                      <ul>
-                        <li>
-                            <p v-for="item5 in item.vip.left" :key="item5.id">
-                              <span>{{item5.title}}</span>
-                              <span>{{item5.desc}}</span>
+      <div class="content">
+        <h3>SUBJECTS&PROGRAMME</h3>
+        <swiper :options="swiperOption" ref="swiperTop" class="swiperTop">
+          <swiper-slide v-for="item in data" :key="item.id">
+            <div class="swiperList" :class="`swiper-list${item.id}`">
+                <div class="top">
+                  <h4 class="title">
+                    <span class="zh">{{item.zhTitle}}</span>
+                    <span class="en">{{item.title}}</span>
+                  </h4>
+                  <p>{{item.desc}}</p>
+                </div>
+                <div class="center">
+                  <h4>考试内容</h4>
+                  <p v-for="(item2,index) in item.content" :key="index">{{item2}}</p>
+                </div>
+                <ul class="bottom">
+                  <li v-for="item3 in item.class" :key="item3.id">
+                    <h4>{{item3.title}}</h4>
+                    <p v-for="item4 in item3.desc" :key="item4.id">
+                      <span v-if="item4.title">{{item4.title}}:</span>
+                      <span>{{item4.desc}}</span>
+                    </p>
+                  </li>
+                </ul>
+                <!-- <div class="vip" v-if="item.vip">
+                    <h4>{{item.vip.title}}</h4>
+                    <ul>
+                      <li>
+                          <p v-for="item5 in item.vip.left" :key="item5.id">
+                            <span>{{item5.title}}</span>
+                            <span>{{item5.desc}}</span>
+                          </p>
+                      </li>
+                      <li>
+                          <div>{{item.vip.center.title}}</div>
+                          <div>
+                            <p v-for="(item6,index2) in item.vip.center.desc" :key="index2">
+                              <span>{{item6.title}}</span>
+                              <span>{{item6.desc}}</span>
                             </p>
-                        </li>
-                        <li>
-                            <div>{{item.vip.center.title}}</div>
-                            <div>
-                              <p v-for="(item6,index2) in item.vip.center.desc" :key="index2">
-                                <span>{{item6.title}}</span>
-                                <span>{{item6.desc}}</span>
-                              </p>
-                            </div>
-                        </li>
-                        <li>
-                           <div>{{item.vip.center.title}}</div>
-                            <div>
-                              <p v-for="(item7,index3) in item.vip.right.desc" :key="index3">
-                                <span>{{item7.title}}</span>
-                                <span>{{item7.desc}}</span>
-                              </p>
-                            </div>
-                        </li>
-                      </ul>
-                  </div>
-                  <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p>
-              </div>
-            </swiper-slide>
-            <div class="swiper-button-prev" slot="button-prev"></div>
-            <div class="swiper-button-next" slot="button-next"></div>
-          </swiper>
-        </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div>{{item.vip.center.title}}</div>
+                          <div>
+                            <p v-for="(item7,index3) in item.vip.right.desc" :key="index3">
+                              <span>{{item7.title}}</span>
+                              <span>{{item7.desc}}</span>
+                            </p>
+                          </div>
+                      </li>
+                    </ul>
+                </div> -->
+                <!-- <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p> -->
+            </div>
+          </swiper-slide>
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
+      </div>
     </div>
   </div>
 </template>
 <script>
 import 'swiper/dist/css/swiper.css'
 import navHeader from '../../../components/navHeader'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 // import modal from '../../../components/courseModal'
 export default {
   name: 'home',
@@ -538,62 +539,65 @@ export default {
              }
            ]
          },
-         {
-           id:5,
-           title:'Broadcasting and Hosting Art',
-           zhTitle:'服装表演',
-           pic:require('../../../assets/images/course5.png'),
-           desc:'本专业是培养能掌握服装表演的基础知识，具有服装表演能力和技巧，能在服装行业从事服装营销与策划及形象展示等工作的高级技术应用性专门人才。',
-           content:[
-             '考生程序主要分为初试和复试。',
-             '初试内容主要为量体：测量身高、体重、三围尺寸、肩宽、体差等;',
-             '复试内容主要为模特技巧：模特步态、造型、乐感、表演能力等。'
-           ],
-           class:[
-             {
-               id:1,
-               title:'短期双师班',
-               desc:[
-                 {
-                   id:1,
-                   title:'开课时间',
-                   desc:'7月'
-                 },
-                 {
-                   id:2,
-                   title:'课时单价',
-                   desc:'120～180元/节'
-                 },
-                 {
-                   id:3,
-                   title:'课程周期',
-                   desc:' 4周'
-                 },{
-                   id:4,
-                   title:'班级容量',
-                   desc:' 20~25人'
-                 },
-                 {
-                   id:5,
-                   title:'课程安排',
-                   desc:'台步基础、站姿、台步、镜前、 造型、平面基础、素颜拍、棚拍、外拍、 身体机能、形体训练、塑性训练、体能、 化妆技巧'
-                 }
-               ]
-             }
-           ]
-         },
+        //  {
+        //    id:5,
+        //    title:'Broadcasting and Hosting Art',
+        //    zhTitle:'服装表演',
+        //    pic:require('../../../assets/images/course5.png'),
+        //    desc:'本专业是培养能掌握服装表演的基础知识，具有服装表演能力和技巧，能在服装行业从事服装营销与策划及形象展示等工作的高级技术应用性专门人才。',
+        //    content:[
+        //      '考生程序主要分为初试和复试。',
+        //      '初试内容主要为量体：测量身高、体重、三围尺寸、肩宽、体差等;',
+        //      '复试内容主要为模特技巧：模特步态、造型、乐感、表演能力等。'
+        //    ],
+        //    class:[
+        //      {
+        //        id:1,
+        //        title:'短期双师班',
+        //        desc:[
+        //          {
+        //            id:1,
+        //            title:'开课时间',
+        //            desc:'7月'
+        //          },
+        //          {
+        //            id:2,
+        //            title:'课时单价',
+        //            desc:'120～180元/节'
+        //          },
+        //          {
+        //            id:3,
+        //            title:'课程周期',
+        //            desc:' 4周'
+        //          },{
+        //            id:4,
+        //            title:'班级容量',
+        //            desc:' 20~25人'
+        //          },
+        //          {
+        //            id:5,
+        //            title:'课程安排',
+        //            desc:'台步基础、站姿、台步、镜前、 造型、平面基础、素颜拍、棚拍、外拍、 身体机能、形体训练、塑性训练、体能、 化妆技巧'
+        //          }
+        //        ]
+        //      }
+        //    ]
+        //  },
        ],
+       
        swiperOption: {
         spaceBetween: 30,
         centeredSlides: true,
-        // autoplay: {
-        //   delay: 3000,
-        //   disableOnInteraction: false
-        // },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
         navigation: {
           nextEl: '.swiper-button-next', //前进按钮的css选择器或HTML元素。
           prevEl: '.swiper-button-prev', //后退按钮的css选择器或HTML元素。
-        }
+        },
+        mySwiper:null,
+
       }
     }
   },
@@ -610,10 +614,19 @@ export default {
     //       this.isActive = Math.floor(sHeight/cHeight)+1
     //   }
     // })
+    this.$nextTick(() => {
+      this.mySwiper = this.$refs.swiperTop.swiper
+    })
   },
   methods:{
     toLink(){
       window.location.href = `/contact.html`
+    },
+    switchSlide(id){
+        id = id - 1 
+
+        this.mySwiper.slideTo(id, 1000, false)//切换到第一个slide，速度为1秒
+        
     }
     // changeActive(id){
     //    this.isActive = id
@@ -629,7 +642,6 @@ export default {
   }
 }
 </script>
-
 <style lang="scss" scoped>
    .swiper-button-prev, .swiper-button-next{
     //  position: fixed;
@@ -640,9 +652,7 @@ export default {
      background-position: center center;
      border-radius: 50%;
      background-color: rgba(255,255,255,.6);
-     
    }
-  
   .page-course{
     .light{
       width: 40%;

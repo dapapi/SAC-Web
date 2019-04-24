@@ -6,12 +6,13 @@
         <div class="content">
           <h3>TEACHING MODELS</h3>
           <div class="teach-desc">
-            <p>艺术中心和每位同学进行意向沟通和定标，</p>
+            <p>你可以和艺术中心的专业辅导老师单独进行意向沟通和定标，</p>
             <p>以学生和家长的理想院校为目标，制定详细的个性化训练学习计划</p>
             <p>采取专业课和文化课相结合的授课方式</p>
           </div>
           <div class="teach-line">
-             <ul class="teach-line1">
+             <img src="../../../assets/images/teachModel.png" />
+             <!-- <ul class="teach-line1">
                <li v-for="item in line1" :key="item.id">
                  <h4>{{item.title}}</h4>
                  <p>{{item.desc}}</p>
@@ -31,10 +32,12 @@
                  <h4>{{item.title}}</h4>
                  <p>{{item.desc}}</p>
                </li>
-             </ul>
+             </ul> -->
              
           </div>
-          <img src="../../../assets/images/teach.png" alt="">
+          <div class="teach">
+            <img src="../../../assets/images/teach.png" alt="">
+          </div>
           
           <ul class="way">
             <li v-for="item in teach" :key="item.id">
@@ -45,11 +48,11 @@
               </div>
             </li>
           </ul>
-          <div class="way-vip">
+          <!-- <div class="way-vip">
               <h4>VIP—对一</h4>
               <p>针对学生专项能力提高、专精领域的答疑和突破，艺术中心设计了高效、高质量的辅导式一对一课程。通过集中训练和学习，对学生的重点项目有的放矢，帮 助学生达到段时间内能力的跃升。</p>
-          </div>
-          <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p>
+          </div> -->
+          <!-- <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p> -->
         </div>
     </div>
   </div>
@@ -175,6 +178,14 @@ export default {
         line-height: 30px;
         
       }
+    }
+    .teach-line{
+      img{
+        width:100%;
+      }
+    }
+    .teach{
+     background-color:rgba(100, 148, 173, .15);
     }
     .teach-line1,.teach-line2{
       margin:20px 0;

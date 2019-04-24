@@ -7,14 +7,14 @@
           <ul class="infolist">
             <li v-for="item in info" :key="item.id">
                 <h4>{{item.title}}</h4>
-                <div v-for="item2 in item.desc" :key="item2.id">
+                <div @click="toDetails(item.id)" v-for="item2 in item.desc" :key="item2.id">
                     <p>{{item2.zh}}</p>
                     <p>{{item2.en}}</p>
                 </div>
                 <p class="more" @click="toDetails(item.id)">查看更多院校</p>
             </li>
           </ul>
-          <p class="linkus">了解更多信息，或预约试听</p>
+          <!-- <p class="linkus">了解更多信息，或预约试听</p> -->
         </div>
     </div>
   </div>
@@ -195,28 +195,31 @@ export default {
           
           padding:20px;
           background-color:rgba(100, 148, 173, .15);
-          color:#6494ad;
+          // color:#6494ad;
           font-size: 14px;
           position: relative;
           padding-bottom:60px;
           >div{
-            margin-bottom:10px;
+            margin-bottom:15px;
           }
           p{
-            line-height: 22px;
-            color:#6494ad;
-
+            line-height: 20px;
+            
+            // color:#6494ad;
+            &:last-child{
+              font-size:12px;
+            }
           }
           h4{
             margin-bottom:20px;
             font-size: 16px;
-            color:#6494ad;
+            // color:#6494ad;
           }
         }
         .more{
           font-size: 16px;
-          background: rgba(18, 125, 243, 0.25);
-          color:rgba(135,167,163,1);
+          background-color:rgba(100, 148, 173, .25);
+          // color:;
           margin-top:10px;
           position: absolute;
           bottom:20px;
@@ -243,8 +246,6 @@ export default {
             }
             .more{
               font-size: 16px;
-              background: rgba(18, 125, 243, 0.25);
-              color:rgba(135,167,163,1);
               margin-top:10px;
               position: absolute;
               bottom:20px;

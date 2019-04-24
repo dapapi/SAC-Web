@@ -17,13 +17,9 @@
              <p>致敬每一份献给舞台的青春。</p>
            </div>
            <div class="about-sign">
-             <span>多年经验教师团队</span>
-             <span>贴合考试政策要求</span>
-             <span>严谨完备课程体系</span>
-             <span>倾尽至诚治学态度</span>
-             <span>巨额奖学金激励</span>
+            <img src="../../../assets/images/us.png" alt="">
            </div>
-           <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p>
+           <!-- <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p> -->
         </div>
     </div>
   </div>
@@ -85,7 +81,7 @@ export default {
     }
     .about-sign{
       text-align: left;
-      margin-top:60px;
+      margin-top:30px;
       span{
         color:#fff;
         font-size: 12px;
@@ -125,21 +121,6 @@ export default {
               display: block;
             }
           }
-          img{
-            display: none;
-          }
-      }
-      .desc{
-        display: none;
-        width: 100%;
-        height:100%;
-        top:0px;
-        font-size: 14px;
-        p{
-          &:first-child{
-             margin-top:4%;
-          }
-        }
       }
      }
   }
@@ -160,17 +141,9 @@ export default {
          }
        }
        .about-desc{
-         margin-top:30px;
+         margin-top:20px;
        }
-       .desc{
-         display: block;
-         background-color:rgba(0,0,0,0.4);
-         bottom:0px;
-         left:0px;
-         padding:4% 0;
-         width:100%;
        
-       }
        img{
          height: 100%;
        }

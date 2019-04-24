@@ -8,7 +8,7 @@
               
               <div class="swiperList" :class="`swiper-list${item.id}`">
                   <img :src="item.url" alt="">
-                  <p>{{item.title}}</p>
+                  <!-- <p>{{item.title}}</p> -->
               </div>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>

@@ -8,9 +8,9 @@
              <p v-for="(item,index) in team1" :key="index">{{item}}</p>
           </div>
           <div class="team-desc">
-             <p v-for="(item,index) in team1" :key="index">{{item}}</p>
+             <p v-for="(item,index) in team2" :key="index">{{item}}</p>
           </div>
-          <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p>
+          <!-- <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p> -->
         </div>
     </div>
   </div>
@@ -56,6 +56,10 @@ export default {
     width:80%;
     margin-left:10%;
     text-align: left;
+    background-image:url("../../../assets/images/teachbg.png");
+    background-repeat:no-repeat;
+    background-position:0 0;
+    background-size:contain;
     .linkus{
       border:1px solid #dcdddd;
       width: 100%;

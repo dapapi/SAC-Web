@@ -9,9 +9,12 @@
             </div>
             <div class="tab" v-show="isShow" @click="navShow()">
                 <ul>
-                    <li v-for="item in nav" :key="item.id">
+                    <li @mouseover="selectStyle(item.id) " @mouseout="outStyle()" v-for="item in nav" :key="item.id">
                         <!-- <router-link :class="item.url === path?'active':''" :to="item.url">{{item.name}}</router-link> -->
                         <a :class="item.url === path?'active':''"  :href="item.url">{{item.name}}</a>
+                        <ul class="course-type" v-if="item.second" v-show="item.id == secondShow">
+                           <li v-for="item2 in item.second" :key="item2.id" @click="switchSlide(item2.id)">{{item2.title}}</li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -66,10 +69,11 @@
             margin:0 auto;
           }
           
+          
       }
       
       
-      @media screen and (min-width:769px){
+      @media screen and (min-width:1221px){
             .pHeader{
               display: none
             }
@@ -86,7 +90,7 @@
             }
             .tab{
                 display:block !important;
-                ul{
+                >ul{
                     display: flex;
                     height: 100%;
                     margin-top:4%;
@@ -94,6 +98,88 @@
                     li{
                         flex: 1;
                         text-align: right;
+                        position: relative;
+
+                        .course-type{
+                            // display: none;
+                            position: absolute;
+                            top:54px;
+                            left: 0px;
+                            width: 100%;
+                            background:rgba(100, 148, 173, 0.15);
+                            padding-bottom:6px;
+                            opacity: .6;
+                            font-size: 12px;
+                            li{
+                                border-bottom:1px solid #dcdddd;
+                                text-align: center;
+                                padding:6px 0;
+                                margin:0 10px;
+                            }
+                        }
+                        a{      
+                            display: inline-block;
+                            margin-top:16px;
+                            padding:8px 14px; 
+                            font-size: 15px;
+                            color:#dcdddd;
+                            letter-spacing: 2px;
+                            opacity: .7;
+                            
+                        }
+                        .active{
+                            border-bottom:2px solid #dcdddd;
+                            color:#dcdddd
+                        }
+                    
+                    }
+                }
+            }
+      }
+      @media screen and (min-width:769px) and (max-width:1220px) {
+           .pHeader{
+              display: none
+            }
+            header{
+                h1{   
+                    position: absolute;
+                    right: 76%;
+                    top:38%;
+                    img{
+                        max-width: 90%;
+                    
+                    }
+                }
+            }
+            .tab{
+                display:block !important;
+                >ul{
+                    display: flex;
+                    height: 100%;
+                    margin-top:4%;
+                    margin-left:30%;
+                    li{
+                        flex: 1;
+                        text-align: right;
+                        position: relative;
+
+                        .course-type{
+                            // display: none;
+                            position: absolute;
+                            top:74px;
+                            left: 0px;
+                            width: 100%;
+                            background:rgba(100, 148, 173, 0.15);
+                            padding-bottom:6px;
+                            opacity: .6;
+                            font-size: 12px;
+                            li{
+                                border-bottom:1px solid #dcdddd;
+                                text-align: center;
+                                padding:6px 0;
+                                margin:0 10px;
+                            }
+                        }
                         a{      
                             display: inline-block;
                             margin-top:16px;
@@ -131,6 +217,9 @@
                        border-bottom:1px solid rgba(255,255,255,.2);
                        font-size:14px;
                         color:#fff;
+                   }
+                   .course-type{
+                       display: none
                    }
                 }
             }
@@ -197,17 +286,36 @@ export default {
                {
                    id:5,
                    name:'课程介绍',
-                   url:'/course.html'
+                   url:'/course.html',
+                   second:[
+                    {
+                    id:1,
+                    title:'影视表演'
+                    },
+                    {
+                    id:2,
+                    title:'舞蹈'
+                    },
+                    {
+                    id:3,
+                    title:'编导'
+                    },
+                    {
+                    id:4,
+                    title:'播音主持'
+                    },
+                ],
+               },
+               
+               {
+                   id:7,
+                   name:'星跃计划',
+                   url:'/starplan.html'
                },
                {
                    id:6,
                    name:'资讯指南',
                    url:'/info.html'
-               },
-               {
-                   id:7,
-                   name:'星跃计划',
-                   url:'/starplan.html'
                },
                {
                    id:8,
@@ -218,6 +326,7 @@ export default {
            ],
            path:this.$route.path,
            isShow:false,
+           secondShow:0
         }
     },
     created(){
@@ -230,9 +339,21 @@ export default {
     },
     methods:{
         navShow(){
-            // alert(222)
-            // alert(this.isShow)
             this.isShow = !this.isShow
+        },
+        switchSlide(id){
+            if(this.$route.path === '/course.html'){
+               this.$emit('change',id)
+            }else{
+                window.location.href='/course.html'
+            }
+            
+        },
+        selectStyle(id){
+            this.secondShow = id
+        },
+        outStyle(){
+            this.secondShow = 0
         }
     }
 }
