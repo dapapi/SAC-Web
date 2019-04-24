@@ -115,6 +115,7 @@
                                 text-align: center;
                                 padding:6px 0;
                                 margin:0 10px;
+                                cursor: pointer;
                             }
                         }
                         a{      
