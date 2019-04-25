@@ -97,7 +97,7 @@
                     margin-left:30%;
                     li{
                         flex: 1;
-                        text-align: right;
+                        text-align: center;
                         position: relative;
 
                         .course-type{
@@ -108,10 +108,10 @@
                             width: 100%;
                             background:rgba(100, 148, 173, 0.15);
                             padding-bottom:6px;
-                            opacity: .6;
+                            opacity: .8;
                             font-size: 12px;
                             li{
-                                border-bottom:1px solid #dcdddd;
+                                border-bottom:1px solid rgba(220,221,221,.2);
                                 text-align: center;
                                 padding:6px 0;
                                 margin:0 10px;
@@ -161,7 +161,7 @@
                     margin-left:30%;
                     li{
                         flex: 1;
-                        text-align: right;
+                        text-align: center;
                         position: relative;
 
                         .course-type{
