@@ -123,7 +123,7 @@ export default {
                   width: 100%;
                   height: 100%;
                   background-color:rgba(0,0,0,0.3);
-                  background-image: url('../../../assets/images/headerTitle.jpg');
+                  background-image: url('https://res-crm.papitube.com/headerTitle.jpg');
                   background-repeat: no-repeat;
                   background-position: center center;
                 }

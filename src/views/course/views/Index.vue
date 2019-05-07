@@ -2,7 +2,7 @@
   <div>
     <navHeader @change="switchSlide"></navHeader>
     <div class="page-course">
-      <div class="light"><img src="../../../assets/images/light.jpg" alt=""></div>
+      <div class="light"><img src="https://res-crm.papitube.com/light.jpg" alt=""></div>
       <div class="content">
         <h3>SUBJECTS&PROGRAMME</h3>
         <swiper :options="swiperOption" ref="swiperTop" class="swiperTop">
@@ -81,7 +81,7 @@ export default {
            id:1,
            title:'Performance',
            zhTitle:'影视表演',
-           pic:require('../../../assets/images/course1.png'),
+           pic:require('https://res-crm.papitube.com/course1.png'),
            desc:'多视表演是塑造人物形象的艺术。针对演员的考试，既注重外部形象条件的选择，又要对考生内部素质进行严格的考察。考试内容可分为声乐、（朗诵）台词、形体、表演，即我们经常说的“声、台、形、表”四门功课',
            content:[
              '考试内容 初试：朗诵（体裁任选一种、每人限3-5分钟）;多人命题练习',
@@ -231,7 +231,7 @@ export default {
            id:2,
            title:'Dance',
            zhTitle:'舞蹈',
-           pic:require('../../../assets/images/course2.png'),
+           pic:require('https://res-crm.papitube.com/course2.png'),
            desc:'舞蹈为八大艺术之一，是于三度空间中以身体为语言作“心智交流”现象之人体的运动表达艺术，本专业培养具备能从事中外舞蹈史、舞蹈理论的研究、舞蹈教学以及编辑等工作的高等专门人才。',
            content:[
              '初试： 1、舞蹈基本功测试； 2、技巧； 3、自选舞蹈作品表演',
@@ -395,7 +395,7 @@ export default {
            id:3,
            title:'Radio and TV Editing',
            zhTitle:'编导',
-           pic:require('../../../assets/images/course3.png'),
+           pic:require('https://res-crm.papitube.com/course3.png'),
            desc:'本专业是培养具备广播电视节目策划、编导创作专业知识与技能，具备较高理论修养和艺术鉴赏能力，能够从事广播电视网络文艺节目、栏目及频道策划，综艺节目模式研发与创意设计，节目编导、文案写作、制作实施及节目主持人等领域工作的高级复合型人才。',
            content:[
              '考试程序上主要分为笔试和面试，笔试部分主要有文学艺术常识、故事创作、影视作品分析; ',
@@ -469,7 +469,7 @@ export default {
            id:4,
            title:'Broadcasting and Hosting Art',
            zhTitle:'播音主持',
-           pic:require('../../../assets/images/course4.png'),
+           pic:require('https://res-crm.papitube.com/course4.png'),
            desc:'本专业是培养具备中国播音学、新闻传播学、中国语言文学、哲学美学、 艺术学等多学科知识与能力，从事新闻播音主持、综艺主持、专题主持、 体育评论解说、影视配音、文艺演播，以及播音主持教学与研究工作的复合型语言传播专门人才。',
            content:[
              '考生程序主要分为初试和复试',
@@ -543,7 +543,7 @@ export default {
         //    id:5,
         //    title:'Broadcasting and Hosting Art',
         //    zhTitle:'服装表演',
-        //    pic:require('../../../assets/images/course5.png'),
+        //    pic:require('https://res-crm.papitube.com/course5.png'),
         //    desc:'本专业是培养能掌握服装表演的基础知识，具有服装表演能力和技巧，能在服装行业从事服装营销与策划及形象展示等工作的高级技术应用性专门人才。',
         //    content:[
         //      '考生程序主要分为初试和复试。',
@@ -804,27 +804,27 @@ export default {
       }
       .swiper-list1{
         .top{
-          background-image:url('../../../assets/images/course1.png')
+          background-image:url('https://res-crm.papitube.com/course1.png')
         }
       }
       .swiper-list2{
         .top{
-          background-image:url('../../../assets/images/course2.png')
+          background-image:url('https://res-crm.papitube.com/course2.png')
         }
       }
       .swiper-list3{
         .top{
-          background-image:url('../../../assets/images/course3.png')
+          background-image:url('https://res-crm.papitube.com/course3.png')
         }
       }
       .swiper-list4{
         .top{
-          background-image:url('../../../assets/images/course4.png')
+          background-image:url('https://res-crm.papitube.com/course4.png')
         }
       }
       .swiper-list5{
         .top{
-          background-image:url('../../../assets/images/course5.png')
+          background-image:url('https://res-crm.papitube.com/course5.png')
         }
       }
     }

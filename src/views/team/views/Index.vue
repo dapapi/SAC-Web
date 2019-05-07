@@ -56,7 +56,7 @@ export default {
     width:80%;
     margin-left:10%;
     text-align: left;
-    background-image:url("../../../assets/images/teachbg.png");
+    background-image:url("https://res-crm.papitube.com/teachbg.png");
     background-repeat:no-repeat;
     background-position:0 0;
     background-size:contain;

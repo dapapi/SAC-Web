@@ -37,13 +37,13 @@ export default {
            id:1,
            phone:'188 1036 0206',
            name:'雪昱老师',
-           img:require('../../../assets/images/wechat2.png'),
+           img:require('https://res-crm.papitube.com/wechat2.png'),
          },
          {
            id:2,
            phone:'139 2846 0192',
            name:'乐褀老师',
-           img:require('../../../assets/images/wechat1.png'),
+           img:require('https://res-crm.papitube.com/git wechat1.png'),
          }
        ]
     }

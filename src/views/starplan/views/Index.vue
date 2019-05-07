@@ -52,7 +52,7 @@ export default {
 
 <style lang="scss" scoped>
   .all-page{
-    background-image:url("../../../assets/images/starplan.png");
+    background-image:url("https://res-crm.papitube.com/starplan.png");
     background-repeat:no-repeat;
     background-position:0 0;
     background-size:100% 100%;

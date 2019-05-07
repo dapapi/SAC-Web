@@ -2,10 +2,10 @@
     <header>
         <div class="content">
             <h1>
-                <img src="../assets/images/logo.png" alt="">
+                <img src="https://res-crm.papitube.com/logo.png" alt="">
             </h1>
             <div class="pHeader" @click="navShow()">
-                <img src="../assets/images/headerTitle.jpg" alt="">
+                <img src="https://res-crm.papitube.com/headerTitle.jpg" alt="">
             </div>
             <div class="tab" v-show="isShow" @click="navShow()">
                 <ul>

@@ -2,7 +2,7 @@
   <div>
     <navHeader></navHeader>
     <div class="page-about">
-      <div class="light"><img src="../../../assets/images/light.jpg" alt=""></div>
+      <div class="light"><img src="https://res-crm.papitube.com/light.jpg" alt=""></div>
         <div class="content">
           
            <h3>ABOUT US</h3>
@@ -17,7 +17,7 @@
              <p>致敬每一份献给舞台的青春。</p>
            </div>
            <div class="about-sign">
-            <img src="../../../assets/images/us.png" alt="">
+            <img src="https://res-crm.papitube.com/us.png" alt="">
            </div>
            <!-- <p @click="toLink()" class="linkus">了解更多信息，或预约试听</p> -->
         </div>

@@ -2,7 +2,7 @@
   <div>
     <navHeader></navHeader>
     <div class="page-teach">
-      <div class="light"><img src="../../../assets/images/light.jpg" alt=""></div>
+      <div class="light"><img src="https://res-crm.papitube.com/light.jpg" alt=""></div>
         <div class="content">
           <h3>TEACHING MODELS</h3>
           <div class="teach-desc">
@@ -11,7 +11,7 @@
             <p>采取专业课和文化课相结合的授课方式</p>
           </div>
           <div class="teach-line">
-             <img src="../../../assets/images/teachModel.png" />
+             <img src="https://res-crm.papitube.com/teachModel.png" />
              <!-- <ul class="teach-line1">
                <li v-for="item in line1" :key="item.id">
                  <h4>{{item.title}}</h4>
@@ -36,7 +36,7 @@
              
           </div>
           <div class="teach">
-            <img src="../../../assets/images/teach.png" alt="">
+            <img src="https://res-crm.papitube.com/teach.png" alt="">
           </div>
           
           <ul class="way">
