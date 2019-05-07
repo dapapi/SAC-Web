@@ -28,17 +28,17 @@ export default {
          {
            id:1,
            title:'致敬献给舞台的青春',
-           url:require('https://res-crm.papitube.com/home1.jpg')
+           url:'https://res-crm.papitube.com/home1.jpg'
          },
          {
            id:2,
            title:'为每一个至臻闪耀的时刻',
-           url:require('https://res-crm.papitube.com/home2.jpg')
+           url:'https://res-crm.papitube.com/home2.jpg'
          },
          {
            id:3,
            title:'激发闪耀人生',
-           url:require('https://res-crm.papitube.com/home3.jpg')
+           url:'https://res-crm.papitube.com/home3.jpg'
          }
        ],
        swiperOption: {
