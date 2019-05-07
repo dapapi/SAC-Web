@@ -24,7 +24,7 @@
 <style lang="scss">
       @font-face {
           font-family: 'pingfang';
-          src: url('../assets/font/苹方黑体-准-简.ttf');
+          src: url('https://res-crm.papitube.com/苹方黑体-准-简.ttf');
       }
       body,html,ul,li,p,h1,h2,h3,h4,h5,h6{
           padding:0px;
